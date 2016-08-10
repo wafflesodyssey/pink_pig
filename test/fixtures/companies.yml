@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  distributor: false
+  name: MyString
+  url: MyString
+
+two:
+  distributor: false
+  name: MyString
+  url: MyString
