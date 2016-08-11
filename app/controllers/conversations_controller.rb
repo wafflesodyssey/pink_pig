@@ -1,2 +1,43 @@
 class ConversationsController < ApplicationController
+
+  def new
+    @convo = Conversation.new
+  end
+
+  def index
+  #Pagination
+  end
+
+  def create
+    @convo = Conversation.new(conversation_params)
+    if @convo.save
+      redirect_to conversations_path
+    else
+      render :new
+    end
+  end
+
+  def update
+    @convo = Conversation.find(params["id"])
+    @convo.update(conversation_params)
+    if @convo.valid?
+      redirect_to conversations_path
+    else
+      render :edit
+    end
+  end
+
+  def edit
+    @convo = Conversation.find(params["id"])
+  end
+
+  def destroy
+    @convo = Conversation.find(params["id"])
+    @convo.destroy
+    redirect_to conversations_path
+  end
+
+  private def conversation_params
+    params.require("conversation").permit(:user_id, :person_id, :company_id, :notes, :medium, :follow_up_on)
+  end
 end
