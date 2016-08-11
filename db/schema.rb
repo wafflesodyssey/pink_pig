@@ -35,7 +35,8 @@ ActiveRecord::Schema.define(version: 20160811172424) do
   create_table "people", force: :cascade do |t|
     t.string   "title"
     t.string   "full_name"
-    t.string   "company_id"
+    t.integer  "company_id"
+    t.text     "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

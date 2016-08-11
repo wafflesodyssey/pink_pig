@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  full_name: MyString
-  company_id: MyString
+jon:
+  title: manager
+  full_name: jon smith
+  company_id: 1
 
-two:
-  title: MyString
-  full_name: MyString
-  company_id: MyString
+jane:
+  title: boss
+  full_name: jane smith
+  company_id: 1
