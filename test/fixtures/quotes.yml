@@ -1,9 +1,9 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  quote: You are super cool
-  author: Lisa
+  quote: "You are super cool"
+  author: "Lisa"
 
 two:
-  quote: You are super super super super cool
-  author: Jamie
+  quote: "You are super super super super cool"
+  author: "Jamie"
