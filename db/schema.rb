@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 20160811172424) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "conversations", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "person_id"
+    t.integer  "company_id"
+    t.string   "medium"
+    t.text     "notes"
+    t.date     "follow_up_on"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "emails", force: :cascade do |t|
     t.integer  "person_id"
     t.string   "email"
