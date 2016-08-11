@@ -4,10 +4,10 @@ alex:
   name: alex
   email: alex@alex
   password_digest: alex
-  user_type: sales
+  role: sales
 
 erik:
   name: erik
   email: erik@erik
   password_digest: erik
-  user_type: manager
+  role: manager
