@@ -6,6 +6,9 @@ def index
   show_quotes = Quote.where(showed_on.nil?)
 end
 
+def show
+
+end 
 #def show_quote
   #@quote = Quote.all.sample
 
