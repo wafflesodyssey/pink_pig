@@ -10,5 +10,5 @@ class QuoteTest < ActiveSupport::TestCase
     assert_equal new_quote.author, "Lisa"
   end
 
-
+  
 end
