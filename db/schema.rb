@@ -55,6 +55,15 @@ ActiveRecord::Schema.define(version: 20160811174238) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "people", force: :cascade do |t|
+    t.string   "title"
+    t.string   "full_name"
+    t.integer  "company_id"
+    t.text     "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "phone_numbers", force: :cascade do |t|
     t.integer  "person_id"
     t.string   "digits"
