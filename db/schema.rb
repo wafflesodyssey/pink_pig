@@ -11,29 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160810204252) do
-=======
-ActiveRecord::Schema.define(version: 20160810203503) do
->>>>>>> c30de941407e14abd8acc741619ddb208e3458ab
-=======
-ActiveRecord::Schema.define(version: 20160810204014) do
->>>>>>> c32f58148f0f0322096c24611db84f6210d447ea
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  create_table "emails", force: :cascade do |t|
-    t.integer  "person_id"
-    t.string   "email"
-    t.string   "email_type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-=======
-=======
   create_table "companies", force: :cascade do |t|
     t.boolean  "distributor"
     t.string   "name"
@@ -42,7 +24,14 @@ ActiveRecord::Schema.define(version: 20160810204014) do
     t.datetime "updated_at",  null: false
   end
 
->>>>>>> c32f58148f0f0322096c24611db84f6210d447ea
+  create_table "emails", force: :cascade do |t|
+    t.integer  "person_id"
+    t.string   "email"
+    t.string   "email_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
@@ -50,7 +39,6 @@ ActiveRecord::Schema.define(version: 20160810204014) do
     t.string   "user_type"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
->>>>>>> c30de941407e14abd8acc741619ddb208e3458ab
   end
 
 end
