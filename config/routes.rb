@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  get 'dashboard/show'
+
   resources :people
   resources :conversations
   # The priority is based upon order of creation: first created -> highest priority.

@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 20160811202401) do
     t.text     "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "notes"
   end
 
   create_table "phone_numbers", force: :cascade do |t|
