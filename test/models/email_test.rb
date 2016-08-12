@@ -6,6 +6,11 @@ class EmailTest < ActiveSupport::TestCase
     assert first_email.email , "pigsfly@pink.com"
   end
 
+  test "email can be persistant" do
+    email = emails(:one)
+    assert email.valid?
+  end
+
   test "belongs to person" do
     email = emails(:one)
     assert_equal "manager", email.person.title

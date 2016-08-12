@@ -2,7 +2,7 @@
 
 call:
   user: alex
-  person_id: 1
+  person: jon
   company: doggy
   medium: phone
   notes: Negotiated
@@ -10,7 +10,7 @@ call:
 
 email:
   user: erik
-  person_id: 2
+  person: jane
   company: piggy
   medium: email
   notes: Very long email. Hard to understand.
