@@ -11,4 +11,9 @@ class UserTest < ActiveSupport::TestCase
      assert user.valid?
   end
 
+  test "has many conversations" do
+    user = users(:alex)
+    assert_equal 1, user.conversations.count
+  end
+
 end

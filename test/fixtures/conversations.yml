@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 call:
-  user_id: 1
+  user: alex
   person_id: 1
   company_id: 1
   medium: phone
   notes: Negotiated
   follow_up_on: 2016-08-16
 
-two:
-  user_id: 1
+email:
+  user: erik
   person_id: 2
   company_id: 2
   medium: email
