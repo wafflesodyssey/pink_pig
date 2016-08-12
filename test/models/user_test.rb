@@ -7,7 +7,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "can create user" do
-     user = User.create!(name: "martin",email: "martin@mar.tin",password: "123456")
+     user = User.create!(name: "martin", email: "martin@mar.tin", password: "123456")
      assert user.valid?
   end
 
