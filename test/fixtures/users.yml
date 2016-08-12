@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+alex:
+  name: alex
+  email: alex@alex
+  password_digest: alex
+  role: sales
+
+erik:
+  name: erik
+  email: erik@erik
+  password_digest: erik
+  role: manager

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one: 
+  person_id: 1
+  address_line_1: 10 this lane road
+  address_line_2: 20 that lane street
+  city: sanfrancisco
+  state: california
+  postal_code: 94109
+  country: US
+
+two:
+  person_id: 1
+  address_line_1: 20 this lane road
+  address_line_2: 10 that lane street
+  city: clinton
+  state: new jersey
+  postal_code: 08801
+  country: US

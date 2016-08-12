@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+jon:
+  title: manager
+  full_name: jon smith
+  company_id: 1
+
+jane:
+  title: boss
+  full_name: jane smith
+  company_id: 1
