@@ -2,10 +2,10 @@
 
 <%= form_for @convo, url: conversation_path, method: :patch do |f| %>
   <%= f.label :medium %>
-  <%= f.text_field :medium, %>
+  <%= f.text_field :medium %>
   <%= f.label :notes %>
-  <%= f.text_area :notes, %>
+  <%= f.text_area :notes %>
   <%= f.label :follow_up_on %>
-  <%= f.date_field :follow_up_on, %>
+  <%= f.date_field :follow_up_on %>
 
 <% end %>
