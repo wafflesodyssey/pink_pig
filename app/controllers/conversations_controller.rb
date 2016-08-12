@@ -19,8 +19,8 @@ class ConversationsController < ApplicationController
 
   def update
     @convo = Conversation.find(params["id"])
-    @convo.update(conversation_params)
-    if @convo.valid?
+
+    if @convo.update(conversation_params)
       redirect_to conversations_path
     else
       render :edit
