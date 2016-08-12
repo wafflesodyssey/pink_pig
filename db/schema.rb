@@ -28,6 +28,14 @@ ActiveRecord::Schema.define(version: 20160811202401) do
     t.datetime "updated_at",     null: false
   end
 
+  create_table "companies", force: :cascade do |t|
+    t.boolean  "distributor"
+    t.string   "name"
+    t.string   "url"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "conversations", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "person_id"
