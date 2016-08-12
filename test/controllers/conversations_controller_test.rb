@@ -24,6 +24,15 @@ class ConversationsControllerTest < ActionController::TestCase
     assert_response :redirect
   end
 
-  test "can delete convo"
-  
+  test "can delete convo" do
+    @convo = conversations(:two)
+    @convo.save
+    response = delete :destroy, { id: @convo.id }
+    assert_response :redirect
+
+    assert_raises ActiveRecord::RecordNotFound do
+      @convo.reload
+    end
+
+  end
 end
