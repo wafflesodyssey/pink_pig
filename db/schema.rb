@@ -16,15 +16,6 @@ ActiveRecord::Schema.define(version: 20160811202401) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "quotes", force: :cascade do |t|
-    t.text     "quote"
-    t.string   "author"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
-    t.date     "showed_on"
-    t.boolean  "currently_being_used"
-    t.boolean  "used_before"
-end
   create_table "addresses", force: :cascade do |t|
     t.integer  "person_id"
     t.string   "address_line_1"
@@ -35,14 +26,6 @@ end
     t.string   "country"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
-  end
-
-  create_table "companies", force: :cascade do |t|
-    t.boolean  "distributor"
-    t.string   "name"
-    t.string   "url"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
   end
 
   create_table "conversations", force: :cascade do |t|
@@ -81,6 +64,16 @@ end
     t.datetime "updated_at", null: false
   end
 
+  create_table "quotes", force: :cascade do |t|
+    t.text     "quote"
+    t.string   "author"
+    t.date     "showed_on"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.boolean  "currently_being_used"
+    t.boolean  "used_before"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -92,10 +85,10 @@ end
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "role"
+    t.string   "name"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "name"
-    t.string   "role"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
