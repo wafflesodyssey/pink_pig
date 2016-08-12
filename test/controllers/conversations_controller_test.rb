@@ -30,7 +30,7 @@ class ConversationsControllerTest < ActionController::TestCase
   end
 
   test "can delete convo" do
-    @convo = conversations(:two)
+    @convo = conversations(:email)
     @convo.save
     response = delete :destroy, { id: @convo.id }
     assert_response :redirect
