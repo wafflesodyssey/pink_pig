@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class PeopleControllerTest < ActionController::TestCase
   test "should get index" do
@@ -25,5 +25,4 @@ class PeopleControllerTest < ActionController::TestCase
     jon = Person.create(full_name: "jon", company_id: 2, comments: "idiot")
     assert_equal jon.full_name, "jon"
   end
-
 end
