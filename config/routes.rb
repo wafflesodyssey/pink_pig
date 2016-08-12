@@ -1,5 +1,4 @@
-Rails.application.routes.draw do
-  devise_for :users
+Rails.application.routes.dr  devise_for :users
 
   resources :people
 
