@@ -4,8 +4,14 @@ class ConversationsController < ApplicationController
     @convo = Conversation.new
   end
 
+  def show
+    @convo = Conversation.find(params["id"])
+  end
+
   def index
-  #Pagination
+    @page = params[:page].to_i
+    per_page = 15
+    @convos = Conersations.page(@page).per(per_page)
   end
 
   def create

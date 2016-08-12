@@ -6,6 +6,11 @@ class ConversationsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "show convo" do
+    response = get :show, id: conversations(:call).id
+    assert_response :success
+  end
+
   test "create convo" do
     response = post :create, { conversation: { medium: "email", user_id: 2, person_id: 1 } }
     assert_response :redirect
