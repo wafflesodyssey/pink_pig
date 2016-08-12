@@ -1,1 +1,7 @@
 <%=  paginate @convos %>
+
+<% @convos.each do |convo| %>
+<p>
+  <%= convo.notes %>
+</p>
+<% end %>
