@@ -3,7 +3,7 @@
 call:
   user: alex
   person_id: 1
-  company_id: 1
+  company: doggy
   medium: phone
   notes: Negotiated
   follow_up_on: 2016-08-16
@@ -11,7 +11,7 @@ call:
 email:
   user: erik
   person_id: 2
-  company_id: 2
+  company: piggy
   medium: email
   notes: Very long email. Hard to understand.
   follow_up_on: 2016-08-17
