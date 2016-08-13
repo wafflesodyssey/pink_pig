@@ -7,7 +7,8 @@ class PeopleControllerTest < ActionController::TestCase
   end
 
   test "should get show" do
-    get :show, id: 1
+    jon = people(:jon)
+    get( :show, {id: jon.id })
     assert_response :success
   end
 
@@ -21,8 +22,17 @@ class PeopleControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "create new person" do
-    jon = Person.create(full_name: "jon", company_id: 2, comments: "idiot")
+  # test "create new person" do
+  #   jon = Person.create(full_name: "jon", company_id: 2, comments: "idiot")
+  #   assert_equal jon.full_name, "jon"
+  # end
+
+  test "should create a new person" do
+    post :create, {user: {full_name: "jon", comments: "its a thing"}}
+  end
+
+  test "create person" do
+    jon = Person.create(full_name: "jon",company_id: 2, comments: "idiot")
     assert_equal jon.full_name, "jon"
   end
 end
