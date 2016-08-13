@@ -1,13 +1,11 @@
 <h4>Record a conversation</h4>
 
-<%= form_for @convo, url: conversations_path do |f| %>
-  <%= f.label :medium %>
-  <%= f.text_field :medium %>
-  <%= f.label :notes %>
-  <%= f.text_area :notes %>
-  <%= f.label :follow_up_on %>
-  <%= f.date_field :follow_up_on %>
+<%= bootstrap_form_for @convo, url: conversations_path, layout: :horizontal do |f| %>
+  <%= f.text_field :medium, control_col: 'col-sm-3' %>
 
-  <%= f.submit "Save" %>
+  <%= f.date_field :follow_up_on, control_col: 'col-sm-3', value: Time.now.to_date.tomorrow %>
 
+  <%= f.text_area :notes, control_col: 'col-sm-10' %>
+
+  <%= f.submit "Save Conversation", class: 'btn btn-primary' %>
 <% end %>

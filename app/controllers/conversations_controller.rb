@@ -16,6 +16,8 @@ class ConversationsController < ApplicationController
 
   def create
     @convo = Conversation.new(conversation_params)
+    @convo.user = current_user
+
     if @convo.save
       redirect_to conversations_path
     else
