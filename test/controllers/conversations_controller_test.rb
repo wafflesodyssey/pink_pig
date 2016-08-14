@@ -13,7 +13,7 @@ class ConversationsControllerTest < ActionController::TestCase
 
   test "create convo" do
     response = post :create, { conversation: { medium: "email", user_id: 2, person_id: 1 } }
-    assert_response :redirect
+    assert_response :success
   end
 
   test "update convo" do
