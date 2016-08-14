@@ -37,6 +37,19 @@
     <![endif]-->
   </head>
   <body>
+    <script>
+      $(document).ready(function() {
+        $("#change_background_1").on("click", function(){
+          $("body").css("background-color", '#663399');
+        });
+        $("#change_background_2").on("click", function(){
+          $("body").css("background-color", '#CFD8DC');
+        });
+        $("#change_background_3").on("click", function(){
+          $("body").css("background-color", '#BDBDBD');
+        });
+      });
+    </script>
 
     <div class="navbar navbar-default navbar-static-top">
       <div class="container">
@@ -75,6 +88,20 @@
             <ul class="nav nav-list">
               <li><%= link_to "Conversations", "/conversations"  %></li>
               <li><%= link_to "People", "/people"  %></li>
+              <li><%= link_to "Edit Users", users_path %></li>
+              <li>
+                <div class="dropdown">
+                  <button class="btn btn-default dropdown-toggle" type "button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    Change Color
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a id="change_background_1">Rebecca Purple</a></li>
+                    <li><a id="change_background_2">Blue</a></li>
+                    <li><a id="change_background_3">Gray</a></li>
+                  </ul>
+                </div>
+              </li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
