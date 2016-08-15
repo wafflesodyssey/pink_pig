@@ -1,7 +1,7 @@
 class ConversationsController < ApplicationController
-
   def new
     @convo = Conversation.new
+    @companies = Company.all
   end
 
   def show
